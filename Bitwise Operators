@@ -1,0 +1,44 @@
+/* Bitwise Operators */
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+//Complete the following function.
+
+
+void calculate_the_maximum(int n, int k) {
+     int max1 = 0; int m1 = 0;
+      int max2 = 0; int m2 = 0;
+      int max3 = 0; int m3 = 0;
+  for(int i = 1 ;i<=n ;i++){
+      for(int j = i ;j<=n;j++){
+        
+          if(i==j) continue;                       
+          else{
+             m1=i&j;
+             if(m1>max1 && m1<k) max1 = m1;
+              m2=i|j;
+             if(m2>max2 && m2<k) max2 = m2;
+             m3=i^j;
+             if(m3>max3 && m3<k) max3 = m3;
+          }
+      }
+  }
+    
+  printf("%i\n",max1);
+  printf("%i\n",max2);
+  printf("%i\n",max3);
+
+
+}
+
+
+int main() {
+    int n, k;
+  
+    scanf("%d %d", &n, &k);
+    calculate_the_maximum(n, k);
+ 
+    return 0;
+}
