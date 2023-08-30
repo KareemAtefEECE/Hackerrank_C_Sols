@@ -1,0 +1,22 @@
+/* Functions in C */
+
+#include <stdio.h>
+
+int max_of_four(int n1,int n2,int n3,int n4);
+
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d", ans);
+    
+    return 0;
+}
+
+int max_of_four(int n1,int n2,int n3,int n4){
+    int max = n1;
+    if(n2>max) max = n2;
+    if(n3>max) max = n3;
+    if(n4>max) max = n4;
+    return max;
+}
