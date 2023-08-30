@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+	
+    int num1;
+    int num2;
+    float number1;
+    float number2;
+    scanf("%i %i",&num1,&num2);
+    scanf("%f %f",&number1,&number2);
+
+    printf("%i %i\n",num1+num2,num1-num2);
+    printf("%0.1f %0.1f\n",number1+number2,number1-number2);
+
+    return 0;
+}
